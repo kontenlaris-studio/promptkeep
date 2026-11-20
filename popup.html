@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PromptVault</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header>
+  <strong>PromptVault</strong>
+  <span id="count"></span>
+</header>
+
+<section class="add">
+  <textarea id="new-text" rows="3" placeholder="Paste a prompt or note, then Save. Tip: select text on any page, right-click → Save selection."></textarea>
+  <input id="new-tags" type="text" placeholder="tags, comma separated (optional)">
+  <button id="add-btn">Save</button>
+</section>
+
+<input id="search" type="search" placeholder="Search your library…">
+
+<main id="list"></main>
+
+<footer>
+  <button id="export-btn" title="Download library as JSON">Export</button>
+  <label class="import-label" title="Load a previously exported JSON">Import
+    <input id="import-file" type="file" accept="application/json" hidden>
+  </label>
+</footer>
+
+<script src="popup.js"></script>
+</body>
+</html>
